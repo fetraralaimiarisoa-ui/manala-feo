@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b1220">
+<title>MANALA FEO — AI Music Studio</title><link rel="stylesheet" href="style.css">
+</head>
+<body><div class="shell">
+<header><a class="brand" href="#"><span class="logo">♫</span><span>MANALA <b>FEO</b><small>AI MUSIC STUDIO</small></span></a><span class="pill"><i></i> IA dans le navigateur</span></header>
+<main>
+<section class="hero"><div class="eyebrow">✦ AI AUDIO WORKSPACE</div><h1>Ta musique.<br><span>Chaque piste séparée.</span></h1><p>Prépare tes morceaux pour isoler les voix, la batterie, la basse et les autres instruments.</p><div class="tags"><span>VOCAL REMOVER</span><span>STEM SEPARATOR</span><span>WAV EXPORT</span></div></section>
+<section class="panel"><div class="heading"><h2><em>01</em> Importer un morceau</h2><small>MP3 · WAV · FLAC*</small></div>
+<label class="drop" id="drop" for="audio"><input id="audio" type="file" accept="audio/*,.mp3,.wav,.flac,.m4a,.ogg"><span class="upload">↑</span><strong>Dépose ton fichier audio ici</strong><span>ou clique pour choisir un fichier</span><small>Le modèle IA fonctionne sur ton ordinateur.</small></label>
+<div id="filebox" class="filebox hidden"><span class="fileicon">♫</span><div class="filemeta"><b id="filename">audio.mp3</b><small id="filesize"></small></div><button id="remove" class="remove">Retirer</button></div><audio id="preview" controls class="player hidden"></audio>
+<div class="heading next"><h2><em>02</em> Choisir la séparation</h2></div>
+<div class="modes"><label class="mode selected"><input type="radio" name="mode" value="4" checked><b class="symbol">◫</b><strong>4 pistes</strong><span>Voix, batterie, basse et autres instruments</span><small>COMPLET</small></label><label class="mode"><input type="radio" name="mode" value="2"><b class="symbol">◉</b><strong>2 pistes</strong><span>Voix isolée et instrumental sans voix</span></label></div>
+<div class="settings"><label>Modèle IA<select id="quality" disabled><option>HTDemucs v4 — 4 pistes</option></select></label><label>Format de sortie<select id="format" disabled><option>WAV — qualité élevée</option></select></label></div>
+<button id="separate" class="primary">✦ Séparer les pistes</button><div id="notice" class="notice"><b>Moteur IA local :</b> le modèle se télécharge au premier lancement (~170 Mo). Le morceau reste sur ton ordinateur.</div>
+</section>
+<section class="panel results"><div class="heading"><h2><em>03</em> Résultats</h2><small>Voix · batterie · basse · autres instruments</small></div><div id="results" class="empty"><span>♫</span><b>Aucune piste pour le moment</b><p>Importe un morceau et lance la séparation IA.</p></div></section>
+<footer><b>MANALA FEO</b><span>Studio de séparation musicale · Version statique</span></footer>
+</main></div><script src="app.js"></script></body></html>
